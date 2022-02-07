@@ -35,4 +35,5 @@ int main()
     cout<<x<<endl;
     delete [] pa;
     delete [] pb;
+    return 0;
 }
