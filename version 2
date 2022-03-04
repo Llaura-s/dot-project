@@ -13,14 +13,14 @@ int main()
 {   
     int i,n;
     static float a[60000001],b[60000001];            //测试参数  在静态区 避免由于声明数组太大导致栈溢出 
-    n=100000000;                                     //测试参数
+    n=10000000;                                     //测试参数
 	for(i=1; i<=n; ++i) a[i]=1,b[i]=2; 
 	auto start = system_clock::now();                                              //开始计时 
     float x=comute(a,b,n); 
 	auto end   = system_clock::now();                                              //结束计时 
     auto duration = duration_cast<microseconds>(end - start);
-    cout << "time:"  << double(duration.count()) * microseconds::period::num / microseconds::period::den 
-     << "μs" << endl;                                                                  //输出运行时间 
+    cout << "time:"  << double(duration.count()) * milliseconds::period::num / milliseconds::period::den 
+     << "ms" << endl;                                                                  //输出运行时间 
     cout<<x<<endl;
     return 0;
 }
