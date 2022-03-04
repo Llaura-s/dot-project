@@ -21,8 +21,8 @@ int main()
     float x=comute(a,b,n); 
 	auto end   = system_clock::now();                                              //结束计时 
     auto duration = duration_cast<microseconds>(end - start);
-    cout << "time:"  << double(duration.count()) * microseconds::period::num / microseconds::period::den 
-     << "μs" << endl;                                                                  //输出运行时间 
+    cout << "time:"  << double(duration.count()) * milliseconds::period::num / milliseconds::period::den 
+     << "ms" << endl;                                                                  //输出运行时间 
     cout<<x<<endl;
     delete [] pa;
     delete [] pb;
